@@ -43,13 +43,13 @@ image: "images/images.jpeg",
     ]
   },
   {
-    dishName: "Chicken Do Pyaza",
-    image: "/images/cd1.jpg",
-    options: [
-      { name: "Chicken Do Pyaza Quarter", price: 140 },
-      { name: "Chicken Do Pyaza Half", price: 280 },
-      { name: "Chicken Do Pyaza Full", price: 480 }
-    ]
+  dishName: "Chicken Do Pyaza",
+  image: "/images/cd1.jpg",
+  options: [
+    { name: "Chicken Do Pyaza Quarter", price: 140 },
+    { name: "Chicken Do Pyaza Half", price: 280 },
+    { name: "Chicken Do Pyaza Full", price: 480 }
+   ]
   },
   {
     dishName: "Chicken Shawarma",
