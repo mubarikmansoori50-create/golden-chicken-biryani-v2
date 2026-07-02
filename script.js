@@ -81,7 +81,7 @@ image: "images/images.jpeg",
   },
   {
     dishName: "Beverages",
-    image: "https://images/file_000000006c0871fb87354bf596b9e38a.png",
+    image: "/images/file_000000006c0871fb87354bf596b9e38a.png",
     options: [
       { name: "Thumbs Up", price: 20 }
     ]
