@@ -76,7 +76,7 @@ image: "images/images.jpeg",
   },
   {
     dishName: "Naan",
-    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600",
+    image: "/images/Screenshot_2026-07-02-21-54-30-42_680d03679600f7af0b4c700c6b270fe7.jpg",
     options: [
       { name: "Naan", price: 10 }
     ]
