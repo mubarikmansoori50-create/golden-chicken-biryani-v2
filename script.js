@@ -37,7 +37,7 @@ const menu = [
   {
     name: "Chicken Handi Half",
     price: 280,
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600"
+    image: "https://images.unsplash.com/photo-1618411640018-97170881be0a?w=600"
   },
   {
     name: "Chicken Handi Full",
@@ -47,22 +47,22 @@ const menu = [
   {
     name: "Chicken Achari Quarter",
     price: 140,
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600"
+    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=600"
   },
   {
     name: "Chicken Kali Mirch Full",
     price: 480,
-    image: "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=600"
+    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600"
   },
   {
     name: "Chicken Do Pyaza Full",
     price: 480,
-    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600"
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600"
   },
   {
     name: "Chicken Shawarma",
     price: 90,
-    image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600"
+    image: "https://images.unsplash.com/photo-1649144415518-e2eb882a1548?w=600"
   },
   {
     name: "Chicken Roll",
@@ -72,7 +72,7 @@ const menu = [
   {
     name: "Tawa Roti",
     price: 10,
-    image: "https://images.unsplash.com/photo-1589302168068-9a4e6ab1f599?w=600"
+    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600"
   },
   {
     name: "Naan",
@@ -82,7 +82,7 @@ const menu = [
   {
     name: "Thumbs Up",
     price: 20,
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600"
+    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600"
   }
 ];
 
@@ -95,7 +95,6 @@ const total = document.getElementById("total");
 function displayFood(list = menu) {
   foodList.innerHTML = "";
   list.forEach((item) => {
-    // Finds the correct index from the original menu array to prevent search bugs
     const globalIndex = menu.indexOf(item); 
     
     foodList.innerHTML += `
