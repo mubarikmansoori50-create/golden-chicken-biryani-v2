@@ -34,8 +34,10 @@ image: "images/images.jpeg",
     ]
   },
   {
-    dishName: "Chicken Kali Mirch",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600",
+  dishName: "Chicken Kali Mirch",
+  image: "/images/Chicken-Kali-Mirch-2-3-500x500.jpg",
+  price: "₹250"
+}
     options: [
       { name: "Chicken Kali Mirch Full", price: 480 }
     ]
