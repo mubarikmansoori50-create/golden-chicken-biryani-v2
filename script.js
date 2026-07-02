@@ -1,3 +1,4 @@
+// Grouped cleanly with exact, high-accuracy dish images
 const menuCategories = [
   {
     dishName: "Chicken Biryani",
@@ -10,7 +11,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Korma",
-    image: "https://images.unsplash.com/photo-1669831610427-463e2c390647?w=600",
+    image: "https://images.unsplash.com/photo-1669831610427-463e2c390647?w=600", // Rich, deep brown Korma gravy
     options: [
       { name: "Chicken Korma Quarter", price: 110 },
       { name: "Chicken Korma Half", price: 220 },
@@ -19,7 +20,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Handi",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600",
+    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600", // Creamy clay-pot style curry
     options: [
       { name: "Chicken Handi Quarter", price: 140 },
       { name: "Chicken Handi Half", price: 280 },
@@ -28,56 +29,56 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Achari",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600",
+    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600", // Tangy, pickle-infused thick masala
     options: [
       { name: "Chicken Achari Quarter", price: 140 }
     ]
   },
   {
     dishName: "Chicken Kali Mirch",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600",
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600", // White/grey creamy black pepper curry (No Tikka)
     options: [
       { name: "Chicken Kali Mirch Full", price: 480 }
     ]
   },
   {
     dishName: "Chicken Do Pyaza",
-    image: "https://images.unsplash.com/photo-1618411640018-97170881be0a?w=600",
+    image: "https://images.unsplash.com/photo-1618411640018-97170881be0a?w=600", // Onion-heavy rich mughlai curry
     options: [
       { name: "Chicken Do Pyaza Full", price: 480 }
     ]
   },
   {
     dishName: "Chicken Shawarma",
-    image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600",
+    image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600", // Authentic shaved shawarma wrap
     options: [
       { name: "Chicken Shawarma", price: 90 }
     ]
   },
   {
     dishName: "Chicken Roll",
-    image: "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=600",
+    image: "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=600", // Indian street style paratha roll
     options: [
       { name: "Chicken Roll", price: 90 }
     ]
   },
   {
     dishName: "Tawa Roti",
-    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600",
+    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600", // Homemade flat disc roti
     options: [
       { name: "Tawa Roti", price: 10 }
     ]
   },
   {
     dishName: "Naan",
-    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600",
+    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600", // Charred tandoori garlic/plain naan
     options: [
       { name: "Naan", price: 10 }
     ]
   },
   {
     dishName: "Beverages",
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600",
+    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600", // Cold dark cola drink
     options: [
       { name: "Thumbs Up", price: 20 }
     ]
@@ -89,14 +90,6 @@ let cart = [];
 const foodList = document.getElementById("food-list");
 const cartBox = document.getElementById("cart");
 const total = document.getElementById("total");
-
-// Create floating/accessible 'See Cart' button container elements dynamically
-const viewCartBtn = document.createElement("button");
-viewCartBtn.id = "see-cart-btn";
-viewCartBtn.innerHTML = "🛒 See Cart (0)";
-viewCartBtn.style.cssText = "position:fixed; bottom:20px; right:20px; padding:12px 20px; background-color:#d32f2f; color:white; border:none; border-radius:50px; font-weight:bold; font-size:16px; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:1000; cursor:pointer;";
-viewCartBtn.onclick = toggleCartView;
-document.body.appendChild(viewCartBtn);
 
 function displayFood(list = menuCategories) {
   foodList.innerHTML = "";
@@ -122,15 +115,63 @@ function displayFood(list = menuCategories) {
           ${optionsHtml}
         </div>
         
-        <button onclick="addSelectedToCart(${catIndex})" style
-image: "./images/chicken-biryani.jpg"
-image: "./images/chicken-korma.jpg"
-image: "./images/chicken-handi.jpg"
-image: "./images/chicken-achari.jpg"
-image: "./images/chicken-kali-mirch.jpg"
-image: "./images/chicken-do-pyaza.jpg"
-image: "./images/chicken-shawarma.jpg"
-image: "./images/chicken-roll.jpg"
-image: "./images/tawa-roti.jpg"
-image: "./images/naan.jpg"
-image: "./images/thumbs-up.jpg"
+        <button onclick="addSelectedToCart(${catIndex})" style="width: 100%; padding: 10px; background-color: #8b0000; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Add to Cart</button>
+      </div>`;
+  });
+}
+
+displayFood();
+
+function addSelectedToCart(catIndex) {
+  const selectedRadio = document.querySelector(`input[name="prod-${catIndex}"]:checked`);
+  if (!selectedRadio) return;
+
+  const optionIndex = selectedRadio.value;
+  const chosenItem = menuCategories[catIndex].options[optionIndex];
+
+  cart.push(chosenItem);
+  updateCart();
+}
+
+function updateCart() {
+  cartBox.innerHTML = "";
+  let sum = 0;
+  cart.forEach((item, i) => {
+    sum += item.price;
+    cartBox.innerHTML += `
+      <p style="margin: 5px 0;">${item.name} - ₹${item.price}
+        <button onclick="removeItem(${i})" style="background:none; border:none; cursor:pointer; margin-left:5px;">❌</button>
+      </p>`;
+  });
+  total.innerHTML = sum;
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+function searchFood() {
+  let value = document.getElementById("search").value.toLowerCase();
+  const filtered = menuCategories.filter(cat => 
+    cat.dishName.toLowerCase().includes(value) || 
+    cat.options.some(opt => opt.name.toLowerCase().includes(value))
+  );
+  displayFood(filtered);
+}
+
+function checkout() {
+  if (cart.length === 0) {
+    alert("Cart is empty");
+    return;
+  }
+  let msg = "🍗 Golden Chicken Biryani Order%0A%0A";
+  let amount = 0;
+  cart.forEach(item => {
+    msg += item.name + " - ₹" + item.price + "%0A";
+    amount += item.price;
+  });
+  msg += "%0ATotal = ₹" + amount;
+  msg += "%0A%0AAddress:";
+  window.open("https://wa.me/917827724514?text=" + msg, "_blank");
+}
