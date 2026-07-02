@@ -11,7 +11,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Korma",
-    image: "https://images.unsplash.com/photo-1669831610427-463e2c390647?w=600", //  deep brown Korma gravy chicken 
+    image: "./images/chicken-korma.jpg", //  deep brown Korma gravy chicken 
     options: [
       { name: "Chicken Korma Quarter", price: 110 },
       { name: "Chicken Korma Half", price: 220 },
