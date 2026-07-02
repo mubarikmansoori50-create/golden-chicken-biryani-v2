@@ -28,9 +28,11 @@ image: "images/images.jpeg",
   },
   {
     dishName: "Chicken Achari",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600",
+    image: "/images/IMG_7892.jpg",
     options: [
-      { name: "Chicken Achari Quarter", price: 140 }
+      { name: "Chicken Achari Quarter", price: 140 },
+      { name: "Chicken Achari Half", price: 280 },
+      { name: "Chicken Achari Full", price: 480 }
     ]
   },
   {
