@@ -1,4 +1,4 @@
-// Organized by base categories so you have a single main image per dish type
+// Grouped cleanly with exact, high-accuracy dish images
 const menuCategories = [
   {
     dishName: "Chicken Biryani",
@@ -11,7 +11,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Korma",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600",
+    image: "https://images.unsplash.com/photo-1669831610427-463e2c390647?w=600", // Rich, deep brown Korma gravy
     options: [
       { name: "Chicken Korma Quarter", price: 110 },
       { name: "Chicken Korma Half", price: 220 },
@@ -20,7 +20,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Handi",
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600",
+    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600", // Creamy clay-pot style curry
     options: [
       { name: "Chicken Handi Quarter", price: 140 },
       { name: "Chicken Handi Half", price: 280 },
@@ -29,44 +29,56 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Achari",
-    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=600",
+    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600", // Tangy, pickle-infused thick masala
     options: [
       { name: "Chicken Achari Quarter", price: 140 }
     ]
   },
   {
     dishName: "Chicken Kali Mirch",
-    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600",
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600", // White/grey creamy black pepper curry (No Tikka)
     options: [
       { name: "Chicken Kali Mirch Full", price: 480 }
     ]
   },
   {
     dishName: "Chicken Do Pyaza",
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600",
+    image: "https://images.unsplash.com/photo-1618411640018-97170881be0a?w=600", // Onion-heavy rich mughlai curry
     options: [
       { name: "Chicken Do Pyaza Full", price: 480 }
     ]
   },
   {
-    dishName: "Snacks & Wraps",
-    image: "https://images.unsplash.com/photo-1649144415518-e2eb882a1548?w=600",
+    dishName: "Chicken Shawarma",
+    image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600", // Authentic shaved shawarma wrap
     options: [
-      { name: "Chicken Shawarma", price: 90 },
+      { name: "Chicken Shawarma", price: 90 }
+    ]
+  },
+  {
+    dishName: "Chicken Roll",
+    image: "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=600", // Indian street style paratha roll
+    options: [
       { name: "Chicken Roll", price: 90 }
     ]
   },
   {
-    dishName: "Breads",
-    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600",
+    dishName: "Tawa Roti",
+    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600", // Homemade flat disc roti
     options: [
-      { name: "Tawa Roti", price: 10 },
+      { name: "Tawa Roti", price: 10 }
+    ]
+  },
+  {
+    dishName: "Naan",
+    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600", // Charred tandoori garlic/plain naan
+    options: [
       { name: "Naan", price: 10 }
     ]
   },
   {
-    dishName: "Drinks",
-    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600",
+    dishName: "Beverages",
+    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600", // Cold dark cola drink
     options: [
       { name: "Thumbs Up", price: 20 }
     ]
@@ -83,12 +95,11 @@ function displayFood(list = menuCategories) {
   foodList.innerHTML = "";
   
   list.forEach((category, catIndex) => {
-    // Generate radio buttons/selectable table row for each size/price choice
     let optionsHtml = "";
     category.options.forEach((opt, optIndex) => {
-      const isChecked = optIndex === 0 ? "checked" : ""; // Selects the first option by default
+      const isChecked = optIndex === 0 ? "checked" : ""; 
       optionsHtml += `
-        <label class="price-option" style="display: block; margin: 8px 0; cursor: pointer;">
+        <label class="price-option" style="display: block; margin: 8px 0; cursor: pointer; font-size: 14px;">
           <input type="radio" name="prod-${catIndex}" value="${optIndex}" ${isChecked}>
           <span>${opt.name} - <strong>₹${opt.price}</strong></span>
         </label>
@@ -96,24 +107,22 @@ function displayFood(list = menuCategories) {
     });
 
     foodList.innerHTML += `
-      <div class="card" style="margin-bottom: 25px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <div class="card" style="margin-bottom: 25px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.08);">
         <img src="${category.image}" alt="${category.dishName}" style="width:100%; height:220px; object-fit:cover; border-radius: 6px;">
-        <h3 style="margin: 10px 0 5px 0;">${category.dishName}</h3>
+        <h3 style="margin: 12px 0 6px 0; font-size: 18px; color: #222;">${category.dishName}</h3>
         
-        <div class="options-container" style="background: #fdfdfd; padding: 5px 10px; border-radius: 4px; margin-bottom: 10px;">
+        <div class="options-container" style="background: #fafafa; padding: 6px 12px; border-radius: 4px; margin-bottom: 12px; border: 1px solid #eee;">
           ${optionsHtml}
         </div>
         
-        <button onclick="addSelectedToCart(${catIndex})" style="width: 100%; padding: 10px; cursor: pointer;">Add to Cart</button>
+        <button onclick="addSelectedToCart(${catIndex})" style="width: 100%; padding: 10px; background-color: #8b0000; color: white; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Add to Cart</button>
       </div>`;
   });
 }
 
-// Initial Rendering
 displayFood();
 
 function addSelectedToCart(catIndex) {
-  // Find which variant/price radio option the user clicked
   const selectedRadio = document.querySelector(`input[name="prod-${catIndex}"]:checked`);
   if (!selectedRadio) return;
 
@@ -130,8 +139,8 @@ function updateCart() {
   cart.forEach((item, i) => {
     sum += item.price;
     cartBox.innerHTML += `
-      <p>${item.name} - ₹${item.price}
-        <button onclick="removeItem(${i})">❌</button>
+      <p style="margin: 5px 0;">${item.name} - ₹${item.price}
+        <button onclick="removeItem(${i})" style="background:none; border:none; cursor:pointer; margin-left:5px;">❌</button>
       </p>`;
   });
   total.innerHTML = sum;
