@@ -1,4 +1,3 @@
-// Grouped cleanly with exact, high-accuracy dish images
 const menuCategories = [
   {
     dishName: "Chicken Biryani",
@@ -11,7 +10,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Korma",
-    image: "./images/chicken-korma.jpg", //  deep brown Korma gravy chicken 
+    image: "https://images.unsplash.com/photo-1669831610427-463e2c390647?w=600",
     options: [
       { name: "Chicken Korma Quarter", price: 110 },
       { name: "Chicken Korma Half", price: 220 },
@@ -20,7 +19,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Handi",
-    image: images/images.jpeg
+    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600",
     options: [
       { name: "Chicken Handi Quarter", price: 140 },
       { name: "Chicken Handi Half", price: 280 },
@@ -29,56 +28,56 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Achari",
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600", // Tangy, pickle-infused thick masala
+    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600",
     options: [
       { name: "Chicken Achari Quarter", price: 140 }
     ]
   },
   {
     dishName: "Chicken Kali Mirch",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600", // White/grey creamy black pepper curry (No Tikka)
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600",
     options: [
       { name: "Chicken Kali Mirch Full", price: 480 }
     ]
   },
   {
     dishName: "Chicken Do Pyaza",
-    image: "https://images.unsplash.com/photo-1618411640018-97170881be0a?w=600", // Onion-heavy rich mughlai curry
+    image: "https://images.unsplash.com/photo-1618411640018-97170881be0a?w=600",
     options: [
       { name: "Chicken Do Pyaza Full", price: 480 }
     ]
   },
   {
     dishName: "Chicken Shawarma",
-    image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600", // Authentic shaved shawarma wrap
+    image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600",
     options: [
       { name: "Chicken Shawarma", price: 90 }
     ]
   },
   {
     dishName: "Chicken Roll",
-    image: "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=600", // Indian street style paratha roll
+    image: "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=600",
     options: [
       { name: "Chicken Roll", price: 90 }
     ]
   },
   {
     dishName: "Tawa Roti",
-    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600", // Homemade flat disc roti
+    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600",
     options: [
       { name: "Tawa Roti", price: 10 }
     ]
   },
   {
     dishName: "Naan",
-    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600", // Charred tandoori garlic/plain naan
+    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600",
     options: [
       { name: "Naan", price: 10 }
     ]
   },
   {
     dishName: "Beverages",
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600", // Cold dark cola drink
+    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=600",
     options: [
       { name: "Thumbs Up", price: 20 }
     ]
@@ -90,6 +89,14 @@ let cart = [];
 const foodList = document.getElementById("food-list");
 const cartBox = document.getElementById("cart");
 const total = document.getElementById("total");
+
+// Create floating/accessible 'See Cart' button container elements dynamically
+const viewCartBtn = document.createElement("button");
+viewCartBtn.id = "see-cart-btn";
+viewCartBtn.innerHTML = "🛒 See Cart (0)";
+viewCartBtn.style.cssText = "position:fixed; bottom:20px; right:20px; padding:12px 20px; background-color:#d32f2f; color:white; border:none; border-radius:50px; font-weight:bold; font-size:16px; box-shadow:0 4px 10px rgba(0,0,0,0.3); z-index:1000; cursor:pointer;";
+viewCartBtn.onclick = toggleCartView;
+document.body.appendChild(viewCartBtn);
 
 function displayFood(list = menuCategories) {
   foodList.innerHTML = "";
@@ -144,11 +151,25 @@ function updateCart() {
       </p>`;
   });
   total.innerHTML = sum;
+  
+  // Updates the item counter display inside the 'See Cart' button bubble
+  viewCartBtn.innerHTML = `🛒 See Cart (${cart.length})`;
 }
 
 function removeItem(index) {
   cart.splice(index, 1);
   updateCart();
+}
+
+function toggleCartView() {
+  const cartContainer = document.getElementById("cart-container") || cartBox.parentElement;
+  if (cartContainer) {
+    cartContainer.scrollIntoView({ behavior: 'smooth' });
+    
+    // Add visual flash effect so user notices where the cart is
+    cartContainer.style.outline = "2px solid #8b0000";
+    setTimeout(() => cartContainer.style.outline = "none", 1200);
+  }
 }
 
 function searchFood() {
@@ -172,6 +193,7 @@ function checkout() {
     amount += item.price;
   });
   msg += "%0ATotal = ₹" + amount;
+  msg += "%0A%0A💳 Pay via UPI to: mubarikmansoori501@ybl";
   msg += "%0A%0AAddress:";
   window.open("https://wa.me/917827724514?text=" + msg, "_blank");
 }
