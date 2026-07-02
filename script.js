@@ -36,10 +36,10 @@ image: "images/images.jpeg",
   {
   dishName: "Chicken Kali Mirch",
   image: "/images/Chicken-Kali-Mirch-2-3-500x500.jpg",
-  price: "₹250"
-}
-    options: [
-      { name: "Chicken Kali Mirch Full", price: 480 }
+  options: [
+      { name: "Chicken Handi Quarter", price: 140 },
+      { name: "Chicken Handi Half", price: 280 },
+      { name: "Chicken Handi Full", price: 480 }
     ]
   },
   {
