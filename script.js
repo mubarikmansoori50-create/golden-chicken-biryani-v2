@@ -10,11 +10,11 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Korma",
-    image: "https://images.unsplash.com/photo-1669831610427-463e2c390647?w=600",
+    image: "/images/hq720.jpg",
     options: [
       { name: "Chicken Korma Quarter", price: 110 },
       { name: "Chicken Korma Half", price: 220 },
-      { name: "Chicken Korma Full", price: 400 }
+      { name: "Chicken Korma Full", price: 380 }
     ]
   },
   {
