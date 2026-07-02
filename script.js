@@ -60,7 +60,7 @@ image: "images/images.jpeg",
   },
   {
     dishName: "Chicken Roll",
-    image: "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=600",
+    image: "/images/1782996415270.png",
     options: [
       { name: "Chicken Roll", price: 90 }
     ]
