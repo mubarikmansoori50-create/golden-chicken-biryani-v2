@@ -10,7 +10,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Korma",
-    image: "/images/images.jpeg",
+    image: "/images/hq720.jpg",
     options: [
       { name: "Chicken Korma Quarter", price: 110 },
       { name: "Chicken Korma Half", price: 220 },
