@@ -69,7 +69,7 @@ image: "images/images.jpeg",
   },
   {
     dishName: "Tawa Roti",
-    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600",
+    image: "/images/Screenshot_2026-07-02-22-00-22-75_680d03679600f7af0b4c700c6b270fe7.jpg",
     options: [
       { name: "Tawa Roti", price: 10 }
     ]
