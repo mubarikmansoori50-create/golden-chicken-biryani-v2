@@ -77,7 +77,7 @@ const menu = [
   {
     name: "Naan",
     price: 10,
-    image: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?w=800&auto=format&fit=crop&q=80"
+    image: <img src="https://images.unsplash.com/photo-1601050690597-df056fb4ce78?w=800&auto=format&fit=crop&q=80" alt="Tandoori Naan" width="100%" />
   },
   {
     name: "Thumbs Up",
