@@ -1,88 +1,75 @@
-const menu = [
+// Organized by base categories so you have a single main image per dish type
+const menuCategories = [
   {
-    name: "Chicken Biryani Quarter",
-    price: 100,
-    image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600"
+    dishName: "Chicken Biryani",
+    image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=600",
+    options: [
+      { name: "Chicken Biryani Quarter", price: 100 },
+      { name: "Chicken Biryani Half", price: 200 },
+      { name: "Chicken Biryani Full", price: 350 }
+    ]
   },
   {
-    name: "Chicken Biryani Half",
-    price: 200,
-    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=600"
+    dishName: "Chicken Korma",
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600",
+    options: [
+      { name: "Chicken Korma Quarter", price: 110 },
+      { name: "Chicken Korma Half", price: 220 },
+      { name: "Chicken Korma Full", price: 400 }
+    ]
   },
   {
-    name: "Chicken Biryani Full",
-    price: 350,
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600"
+    dishName: "Chicken Handi",
+    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600",
+    options: [
+      { name: "Chicken Handi Quarter", price: 140 },
+      { name: "Chicken Handi Half", price: 280 },
+      { name: "Chicken Handi Full", price: 480 }
+    ]
   },
   {
-    name: "Chicken Korma Quarter",
-    price: 110,
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=600"
+    dishName: "Chicken Achari",
+    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=600",
+    options: [
+      { name: "Chicken Achari Quarter", price: 140 }
+    ]
   },
   {
-    name: "Chicken Korma Half",
-    price: 220,
-    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600"
+    dishName: "Chicken Kali Mirch",
+    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600",
+    options: [
+      { name: "Chicken Kali Mirch Full", price: 480 }
+    ]
   },
   {
-    name: "Chicken Korma Full",
-    price: 400,
-    image: "https://images.unsplash.com/photo-1621447509374-24ed974d812d?w=600"
+    dishName: "Chicken Do Pyaza",
+    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600",
+    options: [
+      { name: "Chicken Do Pyaza Full", price: 480 }
+    ]
   },
   {
-    name: "Chicken Handi Quarter",
-    price: 140,
-    image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600"
+    dishName: "Snacks & Wraps",
+    image: "https://images.unsplash.com/photo-1649144415518-e2eb882a1548?w=600",
+    options: [
+      { name: "Chicken Shawarma", price: 90 },
+      { name: "Chicken Roll", price: 90 }
+    ]
   },
   {
-    name: "Chicken Handi Half",
-    price: 280,
-    image: "https://images.unsplash.com/photo-1618411640018-97170881be0a?w=600"
+    dishName: "Breads",
+    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600",
+    options: [
+      { name: "Tawa Roti", price: 10 },
+      { name: "Naan", price: 10 }
+    ]
   },
   {
-    name: "Chicken Handi Full",
-    price: 480,
-    image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600"
-  },
-  {
-    name: "Chicken Achari Quarter",
-    price: 140,
-    image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=600"
-  },
-  {
-    name: "Chicken Kali Mirch Full",
-    price: 480,
-    image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600"
-  },
-  {
-    name: "Chicken Do Pyaza Full",
-    price: 480,
-    image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600"
-  },
-  {
-    name: "Chicken Shawarma",
-    price: 90,
-    image: "https://images.unsplash.com/photo-1649144415518-e2eb882a1548?w=600"
-  },
-  {
-    name: "Chicken Roll",
-    price: 90,
-    image: "https://images.unsplash.com/photo-1626700051175-6518c4793f4f?w=600"
-  },
-  {
-    name: "Tawa Roti",
-    price: 10,
-    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600"
-  },
-  {
-    name: "Naan",
-    price: 10,
-    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600"
-  },
-  {
-    name: "Thumbs Up",
-    price: 20,
-    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600"
+    dishName: "Drinks",
+    image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600",
+    options: [
+      { name: "Thumbs Up", price: 20 }
+    ]
   }
 ];
 
@@ -92,25 +79,48 @@ const foodList = document.getElementById("food-list");
 const cartBox = document.getElementById("cart");
 const total = document.getElementById("total");
 
-function displayFood(list = menu) {
+function displayFood(list = menuCategories) {
   foodList.innerHTML = "";
-  list.forEach((item) => {
-    const globalIndex = menu.indexOf(item); 
-    
+  
+  list.forEach((category, catIndex) => {
+    // Generate radio buttons/selectable table row for each size/price choice
+    let optionsHtml = "";
+    category.options.forEach((opt, optIndex) => {
+      const isChecked = optIndex === 0 ? "checked" : ""; // Selects the first option by default
+      optionsHtml += `
+        <label class="price-option" style="display: block; margin: 8px 0; cursor: pointer;">
+          <input type="radio" name="prod-${catIndex}" value="${optIndex}" ${isChecked}>
+          <span>${opt.name} - <strong>₹${opt.price}</strong></span>
+        </label>
+      `;
+    });
+
     foodList.innerHTML += `
-      <div class="card">
-        <img src="${item.image}" alt="${item.name}" style="width:100%; height:200px; object-fit:cover;">
-        <h3>${item.name}</h3>
-        <p>₹${item.price}</p>
-        <button onclick="addToCart(${globalIndex})">Add to Cart</button>
+      <div class="card" style="margin-bottom: 25px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        <img src="${category.image}" alt="${category.dishName}" style="width:100%; height:220px; object-fit:cover; border-radius: 6px;">
+        <h3 style="margin: 10px 0 5px 0;">${category.dishName}</h3>
+        
+        <div class="options-container" style="background: #fdfdfd; padding: 5px 10px; border-radius: 4px; margin-bottom: 10px;">
+          ${optionsHtml}
+        </div>
+        
+        <button onclick="addSelectedToCart(${catIndex})" style="width: 100%; padding: 10px; cursor: pointer;">Add to Cart</button>
       </div>`;
   });
 }
 
+// Initial Rendering
 displayFood();
 
-function addToCart(index) {
-  cart.push(menu[index]);
+function addSelectedToCart(catIndex) {
+  // Find which variant/price radio option the user clicked
+  const selectedRadio = document.querySelector(`input[name="prod-${catIndex}"]:checked`);
+  if (!selectedRadio) return;
+
+  const optionIndex = selectedRadio.value;
+  const chosenItem = menuCategories[catIndex].options[optionIndex];
+
+  cart.push(chosenItem);
   updateCart();
 }
 
@@ -134,7 +144,11 @@ function removeItem(index) {
 
 function searchFood() {
   let value = document.getElementById("search").value.toLowerCase();
-  displayFood(menu.filter(item => item.name.toLowerCase().includes(value)));
+  const filtered = menuCategories.filter(cat => 
+    cat.dishName.toLowerCase().includes(value) || 
+    cat.options.some(opt => opt.name.toLowerCase().includes(value))
+  );
+  displayFood(filtered);
 }
 
 function checkout() {
