@@ -43,12 +43,12 @@ image: "images/images.jpeg",
     ]
   },
   {
-  dishName: "Chicken Do Pyaza",
-  image: "/images/cd1.jpg",
+  dishName: "Chicken Kali Mirch",
+  image: "/images/Chicken-Kali-Mirch-2-3-500x500.jpg",
   options: [
-    { name: "Chicken Do Pyaza Quarter", price: 140 },
-    { name: "Chicken Do Pyaza Half", price: 280 },
-    { name: "Chicken Do Pyaza Full", price: 480 }
+      { name: "Chicken Kali Mirch Quarter", price: 140 },
+      { name: "Chicken Kali Mirch Half", price: 280 },
+      { name: "Chicken Kali Mirch Full", price: 480 }
    ]
   },
   {
