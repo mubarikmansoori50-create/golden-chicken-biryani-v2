@@ -72,12 +72,12 @@ const menu = [
   {
     name: "Tawa Roti",
     price: 10,
-    image: [https://images.unsplash.com/photo-1601050690597-df056fb4ce78?w=600](https://images.unsplash.com/photo-1601050690597-df056fb4ce78?w=600
+    image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?w=600"
   },
   {
     name: "Naan",
     price: 10,
-    image: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?w=800&auto=format&fit=crop&q=80"
+    image: "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=600"
   },
   {
     name: "Thumbs Up",
