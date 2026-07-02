@@ -20,7 +20,7 @@ const menuCategories = [
   },
   {
     dishName: "Chicken Handi",
-    image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600", // Creamy clay-pot style curry
+    image: images/images.jpeg
     options: [
       { name: "Chicken Handi Quarter", price: 140 },
       { name: "Chicken Handi Half", price: 280 },
