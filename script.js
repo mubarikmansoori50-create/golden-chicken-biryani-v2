@@ -37,15 +37,17 @@ image: "images/images.jpeg",
   dishName: "Chicken Kali Mirch",
   image: "/images/Chicken-Kali-Mirch-2-3-500x500.jpg",
   options: [
-      { name: "Chicken Handi Quarter", price: 140 },
-      { name: "Chicken Handi Half", price: 280 },
-      { name: "Chicken Handi Full", price: 480 }
+      { name: "Chicken Kali Mirch Quarter", price: 140 },
+      { name: "Chicken Kali Mirch Half", price: 280 },
+      { name: "Chicken Kali Mirch Full", price: 480 }
     ]
   },
   {
     dishName: "Chicken Do Pyaza",
-    image: "https://images.unsplash.com/photo-1618411640018-97170881be0a?w=600",
+    image: "/images/cd1.jpg",
     options: [
+      { name: "Chicken Do Pyaza Quarter", price: 140 },
+      { name: "Chicken Do Pyaza Half", price: 280 },
       { name: "Chicken Do Pyaza Full", price: 480 }
     ]
   },
