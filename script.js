@@ -44,7 +44,7 @@ image: "images/images.jpeg",
   },
   {
   dishName: "Chicken Kali Mirch",
-  image: "/images/Chicken-Kali-Mirch-2-3-500x500.jpg",
+  image: "/images/cd1.jpg",
   options: [
       { name: "Chicken Kali Mirch Quarter", price: 140 },
       { name: "Chicken Kali Mirch Half", price: 280 },
