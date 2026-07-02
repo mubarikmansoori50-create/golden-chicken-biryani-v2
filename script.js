@@ -123,3 +123,14 @@ function displayFood(list = menuCategories) {
         </div>
         
         <button onclick="addSelectedToCart(${catIndex})" style
+image: "./images/chicken-biryani.jpg"
+image: "./images/chicken-korma.jpg"
+image: "./images/chicken-handi.jpg"
+image: "./images/chicken-achari.jpg"
+image: "./images/chicken-kali-mirch.jpg"
+image: "./images/chicken-do-pyaza.jpg"
+image: "./images/chicken-shawarma.jpg"
+image: "./images/chicken-roll.jpg"
+image: "./images/tawa-roti.jpg"
+image: "./images/naan.jpg"
+image: "./images/thumbs-up.jpg"
