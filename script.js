@@ -53,7 +53,7 @@ image: "images/images.jpeg",
   },
   {
     dishName: "Chicken Shawarma",
-    image: "https://images.unsplash.com/photo-1561651823-34feb02250e4?w=600",
+    image: "/images/Gemini_Generated_Image_1hltqp1hltqp1hlt.png",
     options: [
       { name: "Chicken Shawarma", price: 90 }
     ]
