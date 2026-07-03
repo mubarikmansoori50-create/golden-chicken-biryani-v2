@@ -54,12 +54,13 @@ image: "images/images.jpeg",
    ]
   },
   {
-  dishname:"Chicken Changezi",
+  dishName: "Chicken Changezi",
   image: "images/Screenshot_2026-07-03-10-49-46-75_680d03679600f7af0b4c700c6b270fe7.jpg",
-    option: [
-      { name: "Chicken Changezi", price: 120 },
-      { name: "Chicken Changezi", price: 230 },
-      { name: "Chicken Changezi", price: 400 },
+  options: [
+    { name: "Chicken Changezi Quarter", price: 120 },
+    { name: "Chicken Changezi Half", price: 230 },
+    { name: "Chicken Changezi Full", price: 400 }
+  ]
 },
   {
     dishName: "Chicken Shawarma",
