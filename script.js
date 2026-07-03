@@ -54,6 +54,11 @@ image: "images/images.jpeg",
    ]
   },
   {
+name:"Chicken Changezi",
+price:220,
+image:"images/Screenshot_2026-07-03-10-49-46-75_680d03679600f7af0b4c700c6b270fe7.jpg"
+},
+  {
     dishName: "Chicken Shawarma",
     image: "/images/Gemini_Generated_Image_1hltqp1hltqp1hlt.png",
     options: [
